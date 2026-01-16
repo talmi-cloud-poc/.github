@@ -1,0 +1,11 @@
+rules:
+  - name: talmi-login-flower-administrators
+    description: Allow some specific people to get an admin Talmi JWT
+    match:
+      issuer: flower-oidc
+      condition:
+        sub: { in: [daniel@company.com] }
+    grant:
+      provider: talmi
+      config:
+        roles: [ "audit:read", "audit:tokens", "audit:explain", "task:read", "task:trigger", "task:logs" ]
