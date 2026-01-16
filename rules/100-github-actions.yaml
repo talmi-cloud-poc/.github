@@ -1,0 +1,13 @@
+rules:
+  - name: debug-allow-readonly-token-for-github
+    description: Allow read-only access to all repositories
+    match:
+      issuer: flower-oidc
+      condition:
+        sub: { equals: "github" }
+    grant:
+      provider: github
+      config:
+        installation_id: 25508
+      permissions:
+        contents: read
