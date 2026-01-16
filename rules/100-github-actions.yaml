@@ -8,6 +8,6 @@ rules:
     grant:
       provider: github
       config:
-        installation_id: 25508
+        installation_id: 104450851
       permissions:
         contents: read
