@@ -4,8 +4,7 @@ rules:
     match:
       issuer: gha-talmi-action-develop
       condition:
-        repository_owner: darmiel
-        repository: talmi-action
+        repository: darmiel/talmi-action
     grant:
       provider: github
       config:
