@@ -2,7 +2,7 @@ rules:
   - name: allow-talmi-action-test-to-read-repositories
     description: Allow read-only access to all repositories for talmi-action CI pipeline
     match:
-      issuer: talmi-action-develop
+      issuer: gha-talmi-action-develop
       condition:
         repository_owner: darmiel
         repository: talmi-action
