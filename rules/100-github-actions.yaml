@@ -1,4 +1,18 @@
 rules:
+  - name: allow-talmi-action-test-to-read-repositories
+    description: Allow read-only access to all repositories for talmi-action CI pipeline
+    match:
+      issuer: talmi-action-develop
+      condition:
+        repository_owner: darmiel
+        repository: talmi-action
+    grant:
+      provider: github
+      config:
+        installation_id: 104450851
+      permissions:
+        contents: read
+
   - name: debug-allow-readonly-token-for-github
     description: Allow read-only access to all repositories
     match:
